@@ -19,7 +19,17 @@ def predict_image(image):
     image = preprocess_image(image)  # Preprocesar la imagen
     prediction = model.predict(image)  # Realizar la predicción
     predicted_class = np.argmax(prediction, axis=1)[0]  # Obtener la clase predicha
-    return f"Predicción: Clase {predicted_class}"  # Devolver la predicción como texto
+    benigno, maligno = prediction[0]  # Obtener la probabilidad de cada clase
+
+    benigno = benigno * 100
+    maligno = maligno * 100
+
+    # Redondear a 2 decimales
+    benigno = round(benigno, 2)
+    maligno = round(maligno, 2)
+
+    # Devolver la clase más probable y las probabilidades formateadas
+    return f'La clase más probable es {"Benigno" if predicted_class == 0 else "Maligno"}\nBenigno : {benigno:.2f}% ; Maligno : {maligno:.2f}%'
 
 # Crear la interfaz en Gradio
 iface = gr.Interface(
