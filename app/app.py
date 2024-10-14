@@ -4,9 +4,10 @@ from PIL import Image
 import numpy as np
 import io
 import base64
+import os
 
 # Cargar el modelo de TensorFlow entrenado
-MODEL_PATH = 'models/model.h5'
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'models', 'model.h5')
 model = load_model(MODEL_PATH)
 
 # Preprocesamiento de la imagen para TensorFlow
