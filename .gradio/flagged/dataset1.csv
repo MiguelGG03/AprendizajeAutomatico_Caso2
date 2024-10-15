@@ -2,3 +2,5 @@ image,output,timestamp
 .gradio\flagged\image\8eee4d97ca0a92658ddf\6299.jpg,,2024-10-14 21:58:53.480847
 .gradio\flagged\image\48e67b9b87ea26b7eba8\5610.jpg,"La clase más probable es Maligno
 Benigno : 25.85% ; Maligno : 74.15%",2024-10-15 16:43:37.553195
+.gradio\flagged\image\91f93e244a91bb34a76c\Imagen de WhatsApp 2024-10-15 a las 16.51.38_c5643e9c.jpg,"La clase más probable es Maligno
+Benigno : 45.72% ; Maligno : 54.28%",2024-10-15 17:01:33.136331
